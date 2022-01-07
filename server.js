@@ -62,7 +62,7 @@ const authenticate = function(request, response, next) {
         throw new ResponseException('401 - Unauthorized request', 403);
     }
 
-    if (!request.body) {
+/*    if (!request.body) {
         console.log('401 - Missing request body');
         throw new ResponseException('401 - Missing request body', 401);
     }
@@ -78,7 +78,7 @@ const authenticate = function(request, response, next) {
         console.log(`wrong secret token = ${requestToken}`);
         throw new ResponseException('403 - Wrong access token', 403);
     }
-
+*/
     console.log('Authentication succeeded');
     next();
 };
