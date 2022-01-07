@@ -5,8 +5,8 @@ WORKDIR /home/node/app
 COPY package*.json ./
 RUN npm install
 COPY . .
-RUN npm test
-RUN npm run lint
+#RUN npm test
+#RUN npm run lint
 
 #### Step 2 ####
 FROM node:alpine as production-builder
