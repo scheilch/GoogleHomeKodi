@@ -57,11 +57,11 @@ const matchPhraseToEndpoint = (request) => {
 
     testRegexNamedGroupesFeature();
 
-    if (request.query.phrase === undefined) {
+    if (request.query.text === undefined) {
         throw new Error(`Missing mandatory query parameter 'phrase'`);
     }
 
-    let phrase = request.query.phrase.toLowerCase().trim();
+    let phrase = request.query.text.toLowerCase().trim();
     // Replace multiple space with single space.
     phrase = phrase.replace(/\s\s+/g, ' ');
 
